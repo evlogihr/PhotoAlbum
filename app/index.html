@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<meta charset="utf-8">
-
-	<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
-	<link href="styles/main.css" rel="stylesheet">
-
-	<script src="cordova.js"></script>
-	<script src="kendo/js/jquery.min.js"></script>
-	<script src="kendo/js/kendo.mobile.min.js"></script>
-	<script src="scripts/app.js"></script>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>
+    <script src="scripts/app/fotos.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
-<body>
-	<div data-role="view">
 
-	</div>
+<body>
+    <div data-role="view" id="home-view" data-id="home-view" data-title="Home" data-layout="default"
+         data-model="listView">
+        
+        <button data-role="button" data-icon="organize" data-align="right"
+                data-bind="click: addImage">Add</button>
+    </div>    
+    
+    <div data-role="view" id="second-view" data-id="second-view" data-title="Second"
+         data-layout="default">
+        Some text
+    </div>
+    
+    <div data-role="layout" id="default" data-id="default">
+        <header data-role="header">
+            <div data-role="navbar">
+                <div data-role="view-title" data-align="left"></div>
+            </div>
+        </header>
+        
+        <footer data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#home-view" data-icon="home">Home</a>
+                <a href="views/fotos-view.html#fotos-view" data-icon="bookmarks">Fotos</a>
+            </div>
+        </footer>
+    </div>
+    
 </body>
+
 </html>
